@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4puokyhp2mba"]
+
+[ext_resource type="Texture2D" uid="uid://cbib0n3fag0ft" path="res://assets/sprites/icon.svg" id="1_t5f3v"]
+[ext_resource type="Script" path="res://scripts/butter.gd" id="1_w8t71"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1q8vc"]
+radius = 24.0
+height = 48.0
+
+[node name="butter" type="Area2D"]
+script = ExtResource("1_w8t71")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1q8vc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1.90735e-06)
+scale = Vector2(0.356, 0.393333)
+texture = ExtResource("1_t5f3v")
+region_enabled = true
+region_rect = Rect2(0, 0, 125.983, 75.6197)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

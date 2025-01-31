@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dhqa7crrni28u"]
 
-[ext_resource type="Script" path="res://scenes/player.gd" id="1_7jv26"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_7jv26"]
 [ext_resource type="Texture2D" uid="uid://cbib0n3fag0ft" path="res://assets/sprites/icon.svg" id="1_d6q0u"]
 [ext_resource type="Texture2D" uid="uid://c6nbamwwqkqnj" path="res://assets/sprites/toast/body.png" id="2_brbmf"]
 [ext_resource type="Texture2D" uid="uid://d1i3kqo4xu6rw" path="res://assets/sprites/toast/arm_l.png" id="3_5cv5h"]
@@ -253,12 +253,13 @@ scale = Vector2(0.290634, 0.290634)
 texture = ExtResource("6_p1km2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
+
+position = Vector2(0, -65)
 texture = ExtResource("1_d6q0u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-0.5, -0.5)
+position = Vector2(0, -64)
+
 shape = SubResource("RectangleShape2D_763a3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
