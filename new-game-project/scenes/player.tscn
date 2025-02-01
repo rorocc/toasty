@@ -9,82 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://saqmsqkpdbd7" path="res://assets/sprites/toast/full_T.png" id="6_p1km2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_763a3"]
-size = Vector2(127, 127)
-
-[sub_resource type="Animation" id="Animation_lcrua"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Skeleton2D/Body/Arm left:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-87, -80)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Skeleton2D/Body/Arm left:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-2.87979]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Skeleton2D/Body/Arm right:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(85, -81)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Skeleton2D/Body/Arm right:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.309]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Skeleton2D/Body/Head:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -89)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Skeleton2D/Body/Head:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
+size = Vector2(204.5, 287.75)
 
 [sub_resource type="Animation" id="Animation_756b6"]
 resource_name = "Idle"
@@ -162,6 +87,81 @@ tracks/5/keys = {
 "values": [0.0, -0.0382189]
 }
 
+[sub_resource type="Animation" id="Animation_lcrua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Body/Arm left:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-87, -80)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Body/Arm left:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-2.87979]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Body/Arm right:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(85, -81)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Body/Arm right:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.309]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Body/Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -89)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Body/Head:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jtee1"]
 _data = {
 "Idle": SubResource("Animation_756b6"),
@@ -180,19 +180,6 @@ auto_calculate_length_and_angle = false
 length = 87.976
 bone_angle = -90.0
 
-[node name="Head" type="Bone2D" parent="Skeleton2D/Body"]
-position = Vector2(0, -89)
-scale = Vector2(1.01042, 1.01042)
-rest = Transform2D(1, 0, 0, 1, 0, -89)
-auto_calculate_length_and_angle = false
-length = 92.28
-bone_angle = -90.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Body/Head"]
-position = Vector2(0, 8)
-scale = Vector2(0.291, 0.291)
-texture = ExtResource("2_brbmf")
-
 [node name="Arm right" type="Bone2D" parent="Skeleton2D/Body"]
 position = Vector2(85, -81)
 rotation = 1.309
@@ -209,6 +196,7 @@ texture = ExtResource("4_a6yi1")
 [node name="Arm left" type="Bone2D" parent="Skeleton2D/Body"]
 position = Vector2(-87, -80)
 rotation = -2.87979
+scale = Vector2(1, 1)
 rest = Transform2D(-4.37114e-08, -1, 1, -4.37114e-08, -87, -80)
 auto_calculate_length_and_angle = false
 length = 98.946
@@ -247,19 +235,31 @@ rotation = -3.14159
 scale = Vector2(0.291, 0.291)
 texture = ExtResource("5_kmnby")
 
+[node name="Head" type="Bone2D" parent="Skeleton2D/Body"]
+position = Vector2(0, -89)
+scale = Vector2(1.01042, 1.01042)
+rest = Transform2D(1, 0, 0, 1, 0, -89)
+auto_calculate_length_and_angle = false
+length = 92.28
+bone_angle = -90.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Body/Head"]
+position = Vector2(0, 8)
+scale = Vector2(0.291, 0.291)
+texture = ExtResource("2_brbmf")
+
 [node name="TPose" type="Sprite2D" parent="."]
 visible = false
 scale = Vector2(0.290634, 0.290634)
 texture = ExtResource("6_p1km2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
+visible = false
 position = Vector2(0, -65)
 texture = ExtResource("1_d6q0u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -64)
-
+position = Vector2(-2, 2.125)
 shape = SubResource("RectangleShape2D_763a3")
 
 [node name="Camera2D" type="Camera2D" parent="."]

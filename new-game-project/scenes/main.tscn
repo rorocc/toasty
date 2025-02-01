@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ce4yi4mqlnubi" path="res://assets/sprites/white tile.png" id="2_148tb"]
 [ext_resource type="Texture2D" uid="uid://5dxm8mjiupuv" path="res://assets/sprites/sky.png" id="3_mqeix"]
 [ext_resource type="Script" path="res://scripts/ui.gd" id="4_c1vl0"]
-[ext_resource type="PackedScene" uid="uid://b4puokyhp2mba" path="res://scenes/butter.tscn" id="5_i5jru"]
+[ext_resource type="PackedScene" path="res://scenes/butter.tscn" id="5_i5jru"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c5l1e"]
 texture = ExtResource("2_148tb")

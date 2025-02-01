@@ -21,6 +21,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		jumps_left = max_jumps
 
+	if !Input.is_anything_pressed():
+		$AnimationPlayer.current_animation = "Idle"
+	else:
+		$AnimationPlayer.stop()
+
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and (is_on_floor() or jumps_left > 0):
 		velocity.y = JUMP_VELOCITY
