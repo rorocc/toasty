@@ -4,12 +4,22 @@ extends CharacterBody2D
 const SPEED = 300.0
 var currentSpeed = 300
 const minSpeed = 30
+
+#Jumping
 const JUMP_VELOCITY = -400.0
 const max_jumps : int = 2
 var jumps_left : int = 2
+
+#Slide
 var inSlide : bool = false
 const slideDecel : float = 0.50
 const butteredslideDecel : float = 0.99
+
+#WallSlide
+var currentWallSlideSpeed : float
+const maxWallSlideSpeed : float = 120
+const wallSlideAcc : float = 10
+
 
 func _ready() -> void:
 	Gm.player = self
@@ -36,7 +46,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * currentSpeed
 	else:
 		velocity.x = move_toward(velocity.x, 0, currentSpeed)
-	
+
+
+#Slide
 	if Input.is_action_just_pressed("slide") && inSlide == false:
 		inSlide = true
 		scale.y = 0.7
@@ -57,5 +69,17 @@ func _physics_process(delta: float) -> void:
 
 			inSlide = false
 			currentSpeed = SPEED
-	print(inSlide , currentSpeed)
+	
+#Wall stick
+	if is_on_wall() && Input.get_axis("left", "right") && velocity.y > 0:
+		print("wallSlide", velocity.y )
+		jumps_left = max_jumps
+		
+		
+		if velocity.y < maxWallSlideSpeed:
+			currentWallSlideSpeed += wallSlideAcc * delta
+		
+		velocity.y = 0 + currentWallSlideSpeed
+	else:
+		currentWallSlideSpeed = 0
 	move_and_slide()

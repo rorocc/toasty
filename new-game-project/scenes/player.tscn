@@ -8,8 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bn3nbfur0gmug" path="res://assets/sprites/toast/leg.png" id="5_kmnby"]
 [ext_resource type="Texture2D" uid="uid://saqmsqkpdbd7" path="res://assets/sprites/toast/full_T.png" id="6_p1km2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_763a3"]
-size = Vector2(204.5, 287.75)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dhmpp"]
+radius = 96.0
+height = 286.0
 
 [sub_resource type="Animation" id="Animation_756b6"]
 resource_name = "Idle"
@@ -172,6 +173,7 @@ _data = {
 script = ExtResource("1_7jv26")
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
+position = Vector2(4, -147)
 
 [node name="Body" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(0, 51)
@@ -259,8 +261,8 @@ position = Vector2(0, -65)
 texture = ExtResource("1_d6q0u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 2.125)
-shape = SubResource("RectangleShape2D_763a3")
+position = Vector2(0, -145)
+shape = SubResource("CapsuleShape2D_dhmpp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
